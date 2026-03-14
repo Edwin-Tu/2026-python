@@ -2,9 +2,7 @@
 
 以開源專案常見結構整理每週課程與解題進度，方便協作、版本控管與後續擴充。
 
-## 🎯 快速開始
-
-**首次使用？** 👉 閱讀 [`docs/analysis/FINAL_SUMMARY.md`](docs/analysis/FINAL_SUMMARY.md) 了解項目現況與優先級建議（15 分鐘）
+:point_right: 加入課程 DC https://discord.gg/uFzPj3TyW6
 
 ## 📁 目錄結構
 
@@ -32,6 +30,8 @@
 │   │   ├── QUESTION-*.md
 │   │   └── solutions/
 ├── CHECK_LIST.md                   # 題目文件品質檢查表
+├── IN_CLASS_EXERCISE.md            # 課堂練習 PR 繳交紀錄（每週匯整）
+├── HOMEWORK.md                     # 作業 PR 繳交紀錄（含內容檢核）
 └── README.md (本檔案)
 ```
 
@@ -50,6 +50,18 @@
 - **questions_analysis.json/csv** - 結構化資料（資料分析或系統整合用）
 
 更詳細的導覽和使用方式，請參考 [`docs/analysis/README.md`](docs/analysis/README.md)
+
+### 繳交狀況追蹤
+
+| 文件 | 說明 |
+|------|------|
+| [`IN_CLASS_EXERCISE.md`](IN_CLASS_EXERCISE.md) | 課堂練習 PR 繳交紀錄，依學號列出每週出席與提交狀況 |
+| [`HOMEWORK.md`](HOMEWORK.md) | 作業 PR 繳交紀錄，含 task / tests / docs 內容檢核 |
+
+**Week 02 課堂練習**（2026-03-05）：✅ 24 人 ／ ⚠️ 4 人 ／ ❌ 27 人  
+**Week 02 作業**：✅ 完整 11 人 ／ ⚠️ 部分缺失 2 人 ／ ❌ 未繳 42 人  
+**Week 03 課堂練習**（2026-03-11）：✅ 10 人 ／ ⚠️ 2 人 ／ ❌ 43 人  
+**Week 03 作業**：✅ 7 人 ／ ❌ 48 人
 
 ### 作業與批改規範
 - 學生提交指南：[`docs/SUBMISSION_GUIDE.md`](docs/SUBMISSION_GUIDE.md)
