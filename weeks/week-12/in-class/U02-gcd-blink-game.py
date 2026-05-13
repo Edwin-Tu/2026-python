@@ -104,7 +104,8 @@ class GCDBlinkGame:
             tk.Spinbox(row, from_=1, to=20, textvariable=iv, width=3,
                        font=("Segoe UI", 12), bg=PANEL, fg="#EEE",
                        buttonbackground="#1F3060", justify="center",
-                       command=self._refresh).grid(row=0, column=i*2+1, padx=(2, 12))
+                       state="readonly", command=self._refresh).grid(
+                           row=0, column=i*2+1, padx=(2, 12))
 
         # 速度控制滑桿
         sp = tk.Frame(self.root, bg=BG)
