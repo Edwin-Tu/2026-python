@@ -1,47 +1,29 @@
-# Week 12 作業解題紀錄
+# Python 練習題 — 學號 1114405014
 
-學號：1114405014
+本資料夾為第十二週 Python 程式設計課程的練習題解答，涵蓋以下主題：
 
-本資料夾包含 Week 12 的 5 題 UVA / ZeroJudge 題目解答。
+## 練習列表
 
-## 題目清單
+| 檔案 | 主題 |
+|------|------|
+| `R01-class-basic/` | 類別基礎：`__init__`、`__repr__`、`__str__`、類別變數 vs 實例變數 |
+| `R01-csv-basic/` | CSV 讀寫：`csv.reader`、`csv.writer`、`csv.DictReader`、`csv.DictWriter` |
+| `R02-json-basic/` | JSON 讀寫：`json.dumps`、`json.loads`、`json.dump`、`json.load` |
+| `R02-property/` | 屬性封裝：`@property`、getter、setter、唯讀屬性 |
+| `R03-inheritance/` | 繼承與 `super()`：方法覆寫、多型、`isinstance`、`issubclass` |
+| `R03-xml-parse/` | XML 解析：`xml.etree.ElementTree`、`find`、`findall`、`iter` |
+| `R04-encoding-hex-base64/` | 編碼解碼：十六進位與 Base64 |
+| `R04-special-methods/` | 特殊方法：`__eq__`、`__lt__`、`__len__`、`__contains__`、`__iter__` |
+| `R05-stats-counter/` | 資料統計：`Counter`、`defaultdict`、`namedtuple` |
 
-| 題號 | 題名 | 資料夾 |
-|---|---|---|
-| 10812 | Beat the Spread! | `10812/` |
-| 10908 | Largest Square | `10908/` |
-| 10922 | 2 the 9s | `10922/` |
-| 10929 | Multiple of 11 | `10929/` |
-| 10931 | Parity | `10931/` |
+## 檔案說明
 
-## 每題資料夾內容
-
-每個題目資料夾皆包含：
-
-- `main.py`：純程式碼版本
-- `main_comment.py`：含繁體中文註解版本
-- `test_input.txt`：測試輸入檔
-- `test_log.md`：測試紀錄
+每個主題資料夾內含兩個檔案：
+- `{主題}.py` — 含有詳細繁體中文註解的教學程式碼
+- `{主題}_practise.py` — 純程式碼（無註解），供練習使用
 
 ## 執行方式
 
-進入任一題目資料夾後執行：
-
 ```bash
-python main.py < test_input.txt
+python3 資料夾名稱/檔名.py
 ```
-
-若要執行註解版：
-
-```bash
-python main_comment.py < test_input.txt
-```
-
-## 環境
-
-- Python 3
-- 不需額外安裝套件
-
-## 備註
-
-程式以簡單直觀寫法為主，並另外提供繁體中文註解版，方便閱讀與檢查。
