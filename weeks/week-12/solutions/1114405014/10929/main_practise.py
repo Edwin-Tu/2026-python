@@ -1,5 +1,3 @@
-# UVA 10929
-
 while True:
     n = input().strip()
 

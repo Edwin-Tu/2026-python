@@ -1,5 +1,3 @@
-# UVA 10812 — Beat the Spread!
-
 # 讀取測試資料筆數
 t = int(input())
 

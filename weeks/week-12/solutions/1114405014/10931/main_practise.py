@@ -1,5 +1,3 @@
-# UVA 10931 — Parity
-
 while True:
     n = int(input())
 

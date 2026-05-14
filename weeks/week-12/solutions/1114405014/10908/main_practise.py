@@ -1,5 +1,3 @@
-# UVA 10908 — Largest Square
-
 t = int(input())
 
 for _ in range(t):

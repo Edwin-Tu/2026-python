@@ -1,5 +1,3 @@
-# UVA 10922 — 2 the 9s
-
 def digit_sum(s):
     return sum(int(ch) for ch in s)
 
