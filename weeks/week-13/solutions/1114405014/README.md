@@ -8,12 +8,6 @@
 1114405014/
 ├── README.md          # 本文件
 ├── TEST_LOG.md        # 測試記錄（Red/Green/Refactor 各階段結果）
-├── test_inputs/       # 主程式測試用的樣本輸入檔
-│   ├── input_11005.txt
-│   ├── input_11063.txt
-│   ├── input_11150.txt
-│   ├── input_11321.txt
-│   └── input_11332.txt
 ├── 11005/             # UVA 11005 — Cheapest Base
 │   ├── main_11005.py      # 主程式（含待實作函式 + stdin/stdout）
 │   ├── practise_11005.py  # 練習用副本
