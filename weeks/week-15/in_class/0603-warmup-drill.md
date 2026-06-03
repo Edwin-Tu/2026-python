@@ -57,6 +57,7 @@ G = Σ Σ gcd(i, j)   for 1 ≤ i < j ≤ n
 ```bash
 # 0.（第一次才要做）Fork 課程 repo 到自己的 GitHub，clone 自己的 fork
 #    git clone <你的 fork 網址>
+#    cd <repo 目錄>
 #    git remote add upstream <課程 repo 網址>
 
 # 1. 從 main 開分支
