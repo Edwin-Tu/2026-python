@@ -16,23 +16,70 @@
 """
 
 import unittest
+from random import Random
 
-# from sorts import bubble_sort, quick_sort, merge_sort  # 完成 sorts.py 後解除註解
+from sorts import bubble_sort, quick_sort, merge_sort  # 完成 sorts.py 後解除註解
 
 # 三個排序函式都放進這個 list,每個測試用 subTest 跑一輪;
 # Stage 3 的加速版 append 進來就能吃到同一組測試。
-SORT_FUNCTIONS = []  # 解除上面 import 後填入
+SORT_FUNCTIONS = [bubble_sort, quick_sort, merge_sort]  # 解除上面 import 後填入
 
 
 class TestSortFunctions(unittest.TestCase):
     def test_basic_cases(self):
-        self.fail("尚未實作 — 自己打提示詞跟 AI 討論後補上")
+        cases = [
+            [3, 1, 2],
+            [5, -1, 0, 5, 2],
+            [1, 2, 3, 4],
+            [4, 3, 2, 1],
+        ]
+
+        for sort_func in SORT_FUNCTIONS:
+            for data in cases:
+                with self.subTest(sort_func=sort_func.__name__, data=data):
+                    self.assertEqual(sort_func(data), sorted(data))
+
+    def test_edge_cases(self):
+        cases = [
+            [],
+            [7],
+            [2, 2, 2],
+            [-3, -10, -1],
+        ]
+
+        for sort_func in SORT_FUNCTIONS:
+            for data in cases:
+                with self.subTest(sort_func=sort_func.__name__, data=data):
+                    self.assertEqual(sort_func(data), sorted(data))
 
     def test_random_data_matches_builtin(self):
-        self.fail("尚未實作")
+        rng = Random(42)
+        cases = [
+            [rng.randint(-100, 100) for _ in range(20)],
+            [rng.randint(-1000, 1000) for _ in range(75)],
+        ]
+
+        for sort_func in SORT_FUNCTIONS:
+            for data in cases:
+                with self.subTest(sort_func=sort_func.__name__, size=len(data)):
+                    self.assertEqual(sort_func(data), sorted(data))
 
     def test_input_not_mutated(self):
-        self.fail("尚未實作")
+        original = [3, 1, 2, 1]
+
+        for sort_func in SORT_FUNCTIONS:
+            with self.subTest(sort_func=sort_func.__name__):
+                data = original.copy()
+                sort_func(data)
+                self.assertEqual(data, original)
+
+    def test_returns_new_list(self):
+        for sort_func in SORT_FUNCTIONS:
+            with self.subTest(sort_func=sort_func.__name__):
+                data = [2, 1]
+                result = sort_func(data)
+                self.assertIsNot(result, data)
+                self.assertEqual(result, [1, 2])
 
 
 if __name__ == "__main__":
