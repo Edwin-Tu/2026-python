@@ -26,7 +26,7 @@
 
 ---
 
-## Stage 1｜`@timeit` 裝飾器(課堂 0:00–0:25)
+## Stage 1｜`@timeit` 裝飾器(0:00–0:20)
 
 寫 `timing.py`,提供裝飾器 `timeit`,規格:
 
@@ -39,7 +39,7 @@
 
 **必備 test case(≥3)**:規格的每一條都要有測試覆蓋。AI 給的測試齊不齊,自己驗收。
 
-## Stage 2｜三種排序 + 量測(課堂 0:25–1:10)
+## Stage 2｜三種排序 + 量測(0:20–0:50)
 
 寫 `sorts.py`,三個函式簽名固定:
 
@@ -65,7 +65,7 @@ def run_benchmark(sizes=(500, 1000, 2000, 4000), repeats=3) -> dict: ...
 - 用你自己的 `@timeit` 量測,每個 n 重複 `repeats` 次取 `records` 平均
 - `python benchmark.py` 印出比較表,並把結果存成 `results.json`(Stage 4 的輸入)
 
-## Stage 3｜加速實驗(課後)
+## Stage 3｜加速實驗(0:50–1:10)
 
 1. **必做**:把內建 `sorted()`(Timsort,C 實作)加入 benchmark 當 baseline
 2. **至少一種加速方案**,自選:
@@ -76,8 +76,9 @@ def run_benchmark(sizes=(500, 1000, 2000, 4000), repeats=3) -> dict: ...
 4. 加速前後的數據都要進 `results.json`,報告要寫出加速比(例:`bubble 4000 筆:2.31s → 0.18s,12.8x`)
 
 > ⚠️ Cython 編譯產物 `build/`、`*.c`、`*.so` **不准 commit**——只交 `.pyx` 原始碼與編譯指令說明。
+> ⏱ 課堂時間有限:Cython 需要編譯環境,若現場 5 分鐘內裝不起來,**果斷改走演算法優化**,不要卡死。
 
-## Stage 4｜畫圖與報告(課後)
+## Stage 4｜畫圖與報告(1:10–1:30)
 
 寫 `plot.py`:
 
@@ -93,13 +94,16 @@ def plot_results(results: dict, out_path: str) -> None: ...
 
 ---
 
-## 時程與繳交
+## 課堂節奏(90 分鐘,四階段全部課堂內完成)
 
-| 時間 | 內容 |
-|------|------|
-| 6/11 課堂(90 分鐘) | Stage 1、2 完成並 push;**下課前開出 PR**(之後同分支繼續 push) |
-| 課後 | Stage 3、4 |
-| **6/17(三)前** | PR 補完全部四階段,完成最終版 |
+全程 AI 協作,沒有課後補交——**下課前 PR 要含全部四個階段**。
+
+| 時間 | 內容 | 計時目標 |
+|------|------|---------|
+| 0:00–0:20 | Stage 1:開分支 → timeit 紅燈 → 綠燈 | ⏱ 0:20 前兩個 commit |
+| 0:20–0:50 | Stage 2:排序紅燈 → 綠燈 → benchmark + `results.json` | ⏱ 0:50 前兩個 commit;**建議此時先開出 PR** |
+| 0:50–1:10 | Stage 3:baseline + 加速版(過同一組測試) | ⏱ 1:10 前兩個 commit |
+| 1:10–1:30 | Stage 4:畫圖 → 報告 → `AI_LOG` / `TEST_LOG` → push | ⏱ **下課前 PR 四階段齊** |
 
 - 分支:`feature/wk16-0611-<學號>`,PR 標題 `Week 16 - <學號> - <姓名>`
 - 所有檔案只能放在 `weeks/week-16/solutions/<學號>/0611/`(CI 會檢查)

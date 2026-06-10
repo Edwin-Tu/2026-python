@@ -50,5 +50,5 @@ def run_benchmark(sizes=(500, 1000, 2000, 4000), repeats=3) -> dict: ...
 
 - [ ] 每階段先紅燈 commit(`test:`)再綠燈 commit(`feat:`),共八個 commit
 - [ ] AI 提示詞自己打,逐字記入 `AI_LOG.md`
-- [ ] 課堂結束前完成 Stage 1–2 並開出 PR;Stage 3–4 同分支補 push,6/17(三)前完成
+- [ ] 全程 AI 協作,四階段課堂內完成;Stage 2 綠燈後先開 PR,**下課前 PR 四階段齊**
 - [ ] Cython 編譯產物(`build/`、`*.c`、`*.so`)不准 commit
