@@ -673,3 +673,17 @@ E   ModuleNotFoundError: No module named 'plot'
 ERROR test_plot.py
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ========================================== 1 error in 2.94s ==========================================
+pytest
+PS D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014> pytest
+======================================== test session starts =========================================
+platform win32 -- Python 3.14.3, pytest-9.0.3, pluggy-1.6.0
+rootdir: D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014
+plugins: anyio-4.13.0
+collected 21 items                                                                                    
+
+test_banchmark.py .....                                                                         [ 23%]
+test_plot.py ......                                                                             [ 52%]
+test_sorts.py .....                                                                             [ 76%]
+test_timing.py .....                                                                            [100%]
+
+========================================= 21 passed in 2.78s =========================================
