@@ -70,3 +70,74 @@ def _merge(left: list, right: list) -> list:
         j += 1
 
     return result
+
+
+def optimized_quick_sort(data: list) -> list:
+    result = data.copy()
+    _optimized_quick_sort_in_place(result, 0, len(result) - 1)
+    return result
+
+
+def _optimized_quick_sort_in_place(data: list, low: int, high: int) -> None:
+    insertion_sort_threshold = 16
+
+    while low < high:
+        if high - low + 1 <= insertion_sort_threshold:
+            _insertion_sort_range(data, low, high)
+            return
+
+        pivot_index = _median_of_three(data, low, high)
+        data[pivot_index], data[high] = data[high], data[pivot_index]
+
+        partition_index = _partition(data, low, high)
+
+        left_size = partition_index - low
+        right_size = high - partition_index
+
+        if left_size < right_size:
+            _optimized_quick_sort_in_place(data, low, partition_index - 1)
+            low = partition_index + 1
+        else:
+            _optimized_quick_sort_in_place(data, partition_index + 1, high)
+            high = partition_index - 1
+
+
+def _median_of_three(data: list, low: int, high: int) -> int:
+    mid = (low + high) // 2
+
+    a = data[low]
+    b = data[mid]
+    c = data[high]
+
+    if a <= b <= c or c <= b <= a:
+        return mid
+
+    if b <= a <= c or c <= a <= b:
+        return low
+
+    return high
+
+
+def _partition(data: list, low: int, high: int) -> int:
+    pivot = data[high]
+    i = low
+
+    for j in range(low, high):
+        if data[j] <= pivot:
+            data[i], data[j] = data[j], data[i]
+            i += 1
+
+    data[i], data[high] = data[high], data[i]
+    return i
+
+
+def _insertion_sort_range(data: list, low: int, high: int) -> None:
+    for i in range(low + 1, high + 1):
+        key = data[i]
+        j = i - 1
+
+        while j >= low and data[j] > key:
+            data[j + 1] = data[j]
+            j -= 1
+
+        data[j + 1] = key

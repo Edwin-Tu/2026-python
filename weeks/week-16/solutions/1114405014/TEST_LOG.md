@@ -612,3 +612,41 @@ test_sorts.py .....                                                             
 test_timing.py .....                                                                            [100%]
 
 ========================================= 10 passed in 0.09s =========================================
+
+pytest
+PS D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014> pytest
+======================================== test session starts =========================================
+platform win32 -- Python 3.14.3, pytest-9.0.3, pluggy-1.6.0
+rootdir: D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014
+plugins: anyio-4.13.0
+collected 10 items / 1 error                                                                          
+
+=============================================== ERRORS ===============================================
+_________________________________ ERROR collecting test_banchmark.py _________________________________
+ImportError while importing test module 'D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014\test_banchmark.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\hc105\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test_banchmark.py:6: in <module>
+    from benchmark import make_data, run_benchmark, save_results
+E   ModuleNotFoundError: No module named 'benchmark'
+====================================== short test summary info =======================================
+ERROR test_banchmark.py
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================================== 1 error in 0.24s ==========================================
+
+pytest
+PS D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014> pytest
+======================================== test session starts =========================================
+platform win32 -- Python 3.14.3, pytest-9.0.3, pluggy-1.6.0
+rootdir: D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014
+plugins: anyio-4.13.0
+collected 15 items                                                                                    
+
+test_banchmark.py .....                                                                         [ 33%]
+test_sorts.py .....                                                                             [ 66%]
+test_timing.py .....                                                                            [100%]
+
+========================================= 15 passed in 0.15s =========================================
