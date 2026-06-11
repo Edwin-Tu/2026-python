@@ -749,3 +749,14 @@ test_security.py::TestSecurityValidation::test_plot_results_rejects_zero_or_nega
 FAILED test_security.py::TestSecurityValidation::test_plot_results_rejects_results_without_data_points - AssertionError: ValueError not raised
 FAILED test_security.py::TestSecurityValidation::test_plot_results_rejects_zero_or_negative_elapsed_time - AssertionError: ValueError not raised
 ============================== 2 failed, 5 passed, 2 warnings in 1.57s ===============================
+python -m pytest test_security.py
+t_security.py
+======================================== test session starts =========================================
+platform win32 -- Python 3.14.3, pytest-9.0.3, pluggy-1.6.0
+rootdir: D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014
+plugins: anyio-4.13.0
+collected 7 items                                                                                     
+
+test_security.py .......                                                                        [100%]
+
+========================================= 7 passed in 0.64s ==========================================
