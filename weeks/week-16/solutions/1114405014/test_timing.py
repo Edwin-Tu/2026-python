@@ -1,62 +1,59 @@
+import io
+import time
 import unittest
+from contextlib import redirect_stdout
 
-from sorts import bubble_sort, quick_sort, merge_sort
-
-
-SORT_FUNCTIONS = [
-    bubble_sort,
-    quick_sort,
-    merge_sort,
-]
+from timing import timeit
 
 
-class TestSortingAlgorithms(unittest.TestCase):
-    def test_sort_positive_numbers(self):
-        data = [5, 3, 1, 4, 2]
-        expected = [1, 2, 3, 4, 5]
+class TestTimeitDecorator(unittest.TestCase):
+    def test_timeit_preserves_return_value(self):
+        @timeit
+        def add(a, b):
+            return a + b
 
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
-                self.assertEqual(sort_func(data), expected)
+        result = add(2, 3)
 
-    def test_sort_with_duplicates(self):
-        data = [4, 2, 4, 1, 2]
-        expected = [1, 2, 2, 4, 4]
+        self.assertEqual(result, 5)
 
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
-                self.assertEqual(sort_func(data), expected)
+    def test_timeit_records_last_elapsed_and_records(self):
+        @timeit
+        def tiny_work():
+            time.sleep(0.001)
+            return "done"
 
-    def test_sort_with_negative_numbers(self):
-        data = [3, -1, 0, -5, 2]
-        expected = [-5, -1, 0, 2, 3]
+        tiny_work()
+        tiny_work()
 
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
-                self.assertEqual(sort_func(data), expected)
+        self.assertTrue(hasattr(tiny_work, "last_elapsed"))
+        self.assertTrue(hasattr(tiny_work, "records"))
+        self.assertIsInstance(tiny_work.last_elapsed, float)
+        self.assertIsInstance(tiny_work.records, list)
+        self.assertEqual(len(tiny_work.records), 2)
+        self.assertEqual(tiny_work.last_elapsed, tiny_work.records[-1])
+        self.assertGreaterEqual(tiny_work.last_elapsed, 0)
 
-    def test_sort_empty_and_single_item_list(self):
-        cases = [
-            ([], []),
-            ([7], [7]),
-        ]
+    def test_timeit_preserves_function_metadata(self):
+        @timeit
+        def sample_function():
+            """sample docstring"""
+            return "ok"
 
-        for sort_func in SORT_FUNCTIONS:
-            for data, expected in cases:
-                with self.subTest(sort_func=sort_func.__name__, data=data):
-                    self.assertEqual(sort_func(data), expected)
+        self.assertEqual(sample_function.__name__, "sample_function")
+        self.assertEqual(sample_function.__doc__, "sample docstring")
 
-    def test_sort_does_not_modify_input_list(self):
-        original = [3, 1, 2]
+    def test_timeit_does_not_print(self):
+        @timeit
+        def quiet_function():
+            return "quiet"
 
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
-                data = original.copy()
-                result = sort_func(data)
+        output = io.StringIO()
 
-                self.assertEqual(result, [1, 2, 3])
-                self.assertEqual(data, original)
-                self.assertIsNot(result, data)
+        with redirect_stdout(output):
+            result = quiet_function()
+
+        self.assertEqual(result, "quiet")
+        self.assertEqual(output.getvalue(), "")
 
 
 if __name__ == "__main__":

@@ -1,762 +1,234 @@
-pytest
-PS D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014> pytest
-======================================== test session starts =========================================
-platform win32 -- Python 3.14.3, pytest-9.0.3, pluggy-1.6.0
-rootdir: D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014
-plugins: anyio-4.13.0
-collected 10 items                                                                                    
-
-test_sorts.py uuu.uuuuuu.uuu.uuu.uuu.                                                           [ 50%]
-test_timing.py uuu.uuuuuu.uuu.uuu.uuu.                                                          [100%]
-
-============================================== FAILURES ==============================================
-________ TestSortingAlgorithms.test_sort_does_not_modify_input_list (sort_func='bubble_sort') ________
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_does_not_modify_input_list>
-
-    def test_sort_does_not_modify_input_list(self):
-        original = [3, 1, 2]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
-                data = original.copy()
-                result = sort_func(data)
-    
->               self.assertEqual(result, [1, 2, 3])
-E               AssertionError: None != [1, 2, 3]
-
-test_sorts.py:57: AssertionError
-________ TestSortingAlgorithms.test_sort_does_not_modify_input_list (sort_func='quick_sort') _________
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_does_not_modify_input_list>
-
-    def test_sort_does_not_modify_input_list(self):
-        original = [3, 1, 2]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
-                data = original.copy()
-                result = sort_func(data)
-    
->               self.assertEqual(result, [1, 2, 3])
-E               AssertionError: None != [1, 2, 3]
-
-test_sorts.py:57: AssertionError
-________ TestSortingAlgorithms.test_sort_does_not_modify_input_list (sort_func='merge_sort') _________
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_does_not_modify_input_list>
-
-    def test_sort_does_not_modify_input_list(self):
-        original = [3, 1, 2]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
-                data = original.copy()
-                result = sort_func(data)
-    
->               self.assertEqual(result, [1, 2, 3])
-E               AssertionError: None != [1, 2, 3]
-
-test_sorts.py:57: AssertionError
-___ TestSortingAlgorithms.test_sort_empty_and_single_item_list (sort_func='bubble_sort', data=[]) ____
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_empty_and_single_item_list>
-
-    def test_sort_empty_and_single_item_list(self):
-        cases = [
-            ([], []),
-            ([7], [7]),
-        ]
-    
-        for sort_func in SORT_FUNCTIONS:
-            for data, expected in cases:
-                with self.subTest(sort_func=sort_func.__name__, data=data):
->                   self.assertEqual(sort_func(data), expected)
-E                   AssertionError: None != []
-
-test_sorts.py:47: AssertionError
-___ TestSortingAlgorithms.test_sort_empty_and_single_item_list (sort_func='bubble_sort', data=[7]) ___
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_empty_and_single_item_list>
-
-    def test_sort_empty_and_single_item_list(self):
-        cases = [
-            ([], []),
-            ([7], [7]),
-        ]
-    
-        for sort_func in SORT_FUNCTIONS:
-            for data, expected in cases:
-                with self.subTest(sort_func=sort_func.__name__, data=data):
->                   self.assertEqual(sort_func(data), expected)
-E                   AssertionError: None != [7]
-
-test_sorts.py:47: AssertionError
-____ TestSortingAlgorithms.test_sort_empty_and_single_item_list (sort_func='quick_sort', data=[]) ____
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_empty_and_single_item_list>
-
-    def test_sort_empty_and_single_item_list(self):
-        cases = [
-            ([], []),
-            ([7], [7]),
-        ]
-    
-        for sort_func in SORT_FUNCTIONS:
-            for data, expected in cases:
-                with self.subTest(sort_func=sort_func.__name__, data=data):
->                   self.assertEqual(sort_func(data), expected)
-E                   AssertionError: None != []
-
-test_sorts.py:47: AssertionError
-___ TestSortingAlgorithms.test_sort_empty_and_single_item_list (sort_func='quick_sort', data=[7]) ____
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_empty_and_single_item_list>
-
-    def test_sort_empty_and_single_item_list(self):
-        cases = [
-            ([], []),
-            ([7], [7]),
-        ]
-    
-        for sort_func in SORT_FUNCTIONS:
-            for data, expected in cases:
-                with self.subTest(sort_func=sort_func.__name__, data=data):
->                   self.assertEqual(sort_func(data), expected)
-E                   AssertionError: None != [7]
-
-test_sorts.py:47: AssertionError
-____ TestSortingAlgorithms.test_sort_empty_and_single_item_list (sort_func='merge_sort', data=[]) ____
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_empty_and_single_item_list>
-
-    def test_sort_empty_and_single_item_list(self):
-        cases = [
-            ([], []),
-            ([7], [7]),
-        ]
-    
-        for sort_func in SORT_FUNCTIONS:
-            for data, expected in cases:
-                with self.subTest(sort_func=sort_func.__name__, data=data):
->                   self.assertEqual(sort_func(data), expected)
-E                   AssertionError: None != []
-
-test_sorts.py:47: AssertionError
-___ TestSortingAlgorithms.test_sort_empty_and_single_item_list (sort_func='merge_sort', data=[7]) ____
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_empty_and_single_item_list>
-
-    def test_sort_empty_and_single_item_list(self):
-        cases = [
-            ([], []),
-            ([7], [7]),
-        ]
-    
-        for sort_func in SORT_FUNCTIONS:
-            for data, expected in cases:
-                with self.subTest(sort_func=sort_func.__name__, data=data):
->                   self.assertEqual(sort_func(data), expected)
-E                   AssertionError: None != [7]
-
-test_sorts.py:47: AssertionError
-_____________ TestSortingAlgorithms.test_sort_positive_numbers (sort_func='bubble_sort') _____________
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_positive_numbers>
-
-    def test_sort_positive_numbers(self):
-        data = [5, 3, 1, 4, 2]
-        expected = [1, 2, 3, 4, 5]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [1, 2, 3, 4, 5]
-
-test_sorts.py:20: AssertionError
-_____________ TestSortingAlgorithms.test_sort_positive_numbers (sort_func='quick_sort') ______________
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_positive_numbers>
-
-    def test_sort_positive_numbers(self):
-        data = [5, 3, 1, 4, 2]
-        expected = [1, 2, 3, 4, 5]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [1, 2, 3, 4, 5]
-
-test_sorts.py:20: AssertionError
-_____________ TestSortingAlgorithms.test_sort_positive_numbers (sort_func='merge_sort') ______________
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_positive_numbers>
-
-    def test_sort_positive_numbers(self):
-        data = [5, 3, 1, 4, 2]
-        expected = [1, 2, 3, 4, 5]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [1, 2, 3, 4, 5]
-
-test_sorts.py:20: AssertionError
-_____________ TestSortingAlgorithms.test_sort_with_duplicates (sort_func='bubble_sort') ______________
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_with_duplicates>
-
-    def test_sort_with_duplicates(self):
-        data = [4, 2, 4, 1, 2]
-        expected = [1, 2, 2, 4, 4]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [1, 2, 2, 4, 4]
-
-test_sorts.py:28: AssertionError
-______________ TestSortingAlgorithms.test_sort_with_duplicates (sort_func='quick_sort') ______________
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_with_duplicates>
-
-    def test_sort_with_duplicates(self):
-        data = [4, 2, 4, 1, 2]
-        expected = [1, 2, 2, 4, 4]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [1, 2, 2, 4, 4]
-
-test_sorts.py:28: AssertionError
-______________ TestSortingAlgorithms.test_sort_with_duplicates (sort_func='merge_sort') ______________
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_with_duplicates>
-
-    def test_sort_with_duplicates(self):
-        data = [4, 2, 4, 1, 2]
-        expected = [1, 2, 2, 4, 4]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [1, 2, 2, 4, 4]
-
-test_sorts.py:28: AssertionError
-__________ TestSortingAlgorithms.test_sort_with_negative_numbers (sort_func='bubble_sort') ___________
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_with_negative_numbers>
-
-    def test_sort_with_negative_numbers(self):
-        data = [3, -1, 0, -5, 2]
-        expected = [-5, -1, 0, 2, 3]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [-5, -1, 0, 2, 3]
-
-test_sorts.py:36: AssertionError
-___________ TestSortingAlgorithms.test_sort_with_negative_numbers (sort_func='quick_sort') ___________
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_with_negative_numbers>
-
-    def test_sort_with_negative_numbers(self):
-        data = [3, -1, 0, -5, 2]
-        expected = [-5, -1, 0, 2, 3]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [-5, -1, 0, 2, 3]
-
-test_sorts.py:36: AssertionError
-___________ TestSortingAlgorithms.test_sort_with_negative_numbers (sort_func='merge_sort') ___________
-
-self = <test_sorts.TestSortingAlgorithms testMethod=test_sort_with_negative_numbers>
-
-    def test_sort_with_negative_numbers(self):
-        data = [3, -1, 0, -5, 2]
-        expected = [-5, -1, 0, 2, 3]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [-5, -1, 0, 2, 3]
-
-test_sorts.py:36: AssertionError
-________ TestSortingAlgorithms.test_sort_does_not_modify_input_list (sort_func='bubble_sort') ________
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_does_not_modify_input_list>
-
-    def test_sort_does_not_modify_input_list(self):
-        original = [3, 1, 2]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
-                data = original.copy()
-                result = sort_func(data)
-    
->               self.assertEqual(result, [1, 2, 3])
-E               AssertionError: None != [1, 2, 3]
-
-test_timing.py:57: AssertionError
-________ TestSortingAlgorithms.test_sort_does_not_modify_input_list (sort_func='quick_sort') _________
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_does_not_modify_input_list>
-
-    def test_sort_does_not_modify_input_list(self):
-        original = [3, 1, 2]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
-                data = original.copy()
-                result = sort_func(data)
-    
->               self.assertEqual(result, [1, 2, 3])
-E               AssertionError: None != [1, 2, 3]
-
-test_timing.py:57: AssertionError
-________ TestSortingAlgorithms.test_sort_does_not_modify_input_list (sort_func='merge_sort') _________
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_does_not_modify_input_list>
-
-    def test_sort_does_not_modify_input_list(self):
-        original = [3, 1, 2]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
-                data = original.copy()
-                result = sort_func(data)
-    
->               self.assertEqual(result, [1, 2, 3])
-E               AssertionError: None != [1, 2, 3]
-
-test_timing.py:57: AssertionError
-___ TestSortingAlgorithms.test_sort_empty_and_single_item_list (sort_func='bubble_sort', data=[]) ____
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_empty_and_single_item_list>
-
-    def test_sort_empty_and_single_item_list(self):
-        cases = [
-            ([], []),
-            ([7], [7]),
-        ]
-    
-        for sort_func in SORT_FUNCTIONS:
-            for data, expected in cases:
-                with self.subTest(sort_func=sort_func.__name__, data=data):
->                   self.assertEqual(sort_func(data), expected)
-E                   AssertionError: None != []
-
-test_timing.py:47: AssertionError
-___ TestSortingAlgorithms.test_sort_empty_and_single_item_list (sort_func='bubble_sort', data=[7]) ___
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_empty_and_single_item_list>
-
-    def test_sort_empty_and_single_item_list(self):
-        cases = [
-            ([], []),
-            ([7], [7]),
-        ]
-    
-        for sort_func in SORT_FUNCTIONS:
-            for data, expected in cases:
-                with self.subTest(sort_func=sort_func.__name__, data=data):
->                   self.assertEqual(sort_func(data), expected)
-E                   AssertionError: None != [7]
-
-test_timing.py:47: AssertionError
-____ TestSortingAlgorithms.test_sort_empty_and_single_item_list (sort_func='quick_sort', data=[]) ____
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_empty_and_single_item_list>
-
-    def test_sort_empty_and_single_item_list(self):
-        cases = [
-            ([], []),
-            ([7], [7]),
-        ]
-    
-        for sort_func in SORT_FUNCTIONS:
-            for data, expected in cases:
-                with self.subTest(sort_func=sort_func.__name__, data=data):
->                   self.assertEqual(sort_func(data), expected)
-E                   AssertionError: None != []
-
-test_timing.py:47: AssertionError
-___ TestSortingAlgorithms.test_sort_empty_and_single_item_list (sort_func='quick_sort', data=[7]) ____
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_empty_and_single_item_list>
-
-    def test_sort_empty_and_single_item_list(self):
-        cases = [
-            ([], []),
-            ([7], [7]),
-        ]
-    
-        for sort_func in SORT_FUNCTIONS:
-            for data, expected in cases:
-                with self.subTest(sort_func=sort_func.__name__, data=data):
->                   self.assertEqual(sort_func(data), expected)
-E                   AssertionError: None != [7]
-
-test_timing.py:47: AssertionError
-____ TestSortingAlgorithms.test_sort_empty_and_single_item_list (sort_func='merge_sort', data=[]) ____
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_empty_and_single_item_list>
-
-    def test_sort_empty_and_single_item_list(self):
-        cases = [
-            ([], []),
-            ([7], [7]),
-        ]
-    
-        for sort_func in SORT_FUNCTIONS:
-            for data, expected in cases:
-                with self.subTest(sort_func=sort_func.__name__, data=data):
->                   self.assertEqual(sort_func(data), expected)
-E                   AssertionError: None != []
-
-test_timing.py:47: AssertionError
-___ TestSortingAlgorithms.test_sort_empty_and_single_item_list (sort_func='merge_sort', data=[7]) ____
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_empty_and_single_item_list>
-
-    def test_sort_empty_and_single_item_list(self):
-        cases = [
-            ([], []),
-            ([7], [7]),
-        ]
-    
-        for sort_func in SORT_FUNCTIONS:
-            for data, expected in cases:
-                with self.subTest(sort_func=sort_func.__name__, data=data):
->                   self.assertEqual(sort_func(data), expected)
-E                   AssertionError: None != [7]
-
-test_timing.py:47: AssertionError
-_____________ TestSortingAlgorithms.test_sort_positive_numbers (sort_func='bubble_sort') _____________
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_positive_numbers>
-
-    def test_sort_positive_numbers(self):
-        data = [5, 3, 1, 4, 2]
-        expected = [1, 2, 3, 4, 5]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [1, 2, 3, 4, 5]
-
-test_timing.py:20: AssertionError
-_____________ TestSortingAlgorithms.test_sort_positive_numbers (sort_func='quick_sort') ______________
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_positive_numbers>
-
-    def test_sort_positive_numbers(self):
-        data = [5, 3, 1, 4, 2]
-        expected = [1, 2, 3, 4, 5]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [1, 2, 3, 4, 5]
-
-test_timing.py:20: AssertionError
-_____________ TestSortingAlgorithms.test_sort_positive_numbers (sort_func='merge_sort') ______________
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_positive_numbers>
-
-    def test_sort_positive_numbers(self):
-        data = [5, 3, 1, 4, 2]
-        expected = [1, 2, 3, 4, 5]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [1, 2, 3, 4, 5]
-
-test_timing.py:20: AssertionError
-_____________ TestSortingAlgorithms.test_sort_with_duplicates (sort_func='bubble_sort') ______________
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_with_duplicates>
-
-    def test_sort_with_duplicates(self):
-        data = [4, 2, 4, 1, 2]
-        expected = [1, 2, 2, 4, 4]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [1, 2, 2, 4, 4]
-
-test_timing.py:28: AssertionError
-______________ TestSortingAlgorithms.test_sort_with_duplicates (sort_func='quick_sort') ______________
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_with_duplicates>
-
-    def test_sort_with_duplicates(self):
-        data = [4, 2, 4, 1, 2]
-        expected = [1, 2, 2, 4, 4]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [1, 2, 2, 4, 4]
-
-test_timing.py:28: AssertionError
-______________ TestSortingAlgorithms.test_sort_with_duplicates (sort_func='merge_sort') ______________
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_with_duplicates>
-
-    def test_sort_with_duplicates(self):
-        data = [4, 2, 4, 1, 2]
-        expected = [1, 2, 2, 4, 4]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [1, 2, 2, 4, 4]
-
-test_timing.py:28: AssertionError
-__________ TestSortingAlgorithms.test_sort_with_negative_numbers (sort_func='bubble_sort') ___________
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_with_negative_numbers>
-
-    def test_sort_with_negative_numbers(self):
-        data = [3, -1, 0, -5, 2]
-        expected = [-5, -1, 0, 2, 3]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [-5, -1, 0, 2, 3]
-
-test_timing.py:36: AssertionError
-___________ TestSortingAlgorithms.test_sort_with_negative_numbers (sort_func='quick_sort') ___________
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_with_negative_numbers>
-
-    def test_sort_with_negative_numbers(self):
-        data = [3, -1, 0, -5, 2]
-        expected = [-5, -1, 0, 2, 3]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [-5, -1, 0, 2, 3]
-
-test_timing.py:36: AssertionError
-___________ TestSortingAlgorithms.test_sort_with_negative_numbers (sort_func='merge_sort') ___________
-
-self = <test_timing.TestSortingAlgorithms testMethod=test_sort_with_negative_numbers>
-
-    def test_sort_with_negative_numbers(self):
-        data = [3, -1, 0, -5, 2]
-        expected = [-5, -1, 0, 2, 3]
-    
-        for sort_func in SORT_FUNCTIONS:
-            with self.subTest(sort_func=sort_func.__name__):
->               self.assertEqual(sort_func(data), expected)
-E               AssertionError: None != [-5, -1, 0, 2, 3]
-
-test_timing.py:36: AssertionError
-====================================== short test summary info =======================================
-SUBFAILED(sort_func='bubble_sort') test_sorts.py::TestSortingAlgorithms::test_sort_does_not_modify_input_list - AssertionError: None != [1, 2, 3]
-SUBFAILED(sort_func='quick_sort') test_sorts.py::TestSortingAlgorithms::test_sort_does_not_modify_input_list - AssertionError: None != [1, 2, 3]
-SUBFAILED(sort_func='merge_sort') test_sorts.py::TestSortingAlgorithms::test_sort_does_not_modify_input_list - AssertionError: None != [1, 2, 3]
-SUBFAILED(sort_func='bubble_sort', data=[]) test_sorts.py::TestSortingAlgorithms::test_sort_empty_and_single_item_list - AssertionError: None != []
-SUBFAILED(sort_func='bubble_sort', data=[7]) test_sorts.py::TestSortingAlgorithms::test_sort_empty_and_single_item_list - AssertionError: None != [7]
-SUBFAILED(sort_func='quick_sort', data=[]) test_sorts.py::TestSortingAlgorithms::test_sort_empty_and_single_item_list - AssertionError: None != []
-SUBFAILED(sort_func='quick_sort', data=[7]) test_sorts.py::TestSortingAlgorithms::test_sort_empty_and_single_item_list - AssertionError: None != [7]
-SUBFAILED(sort_func='merge_sort', data=[]) test_sorts.py::TestSortingAlgorithms::test_sort_empty_and_single_item_list - AssertionError: None != []
-SUBFAILED(sort_func='merge_sort', data=[7]) test_sorts.py::TestSortingAlgorithms::test_sort_empty_and_single_item_list - AssertionError: None != [7]
-SUBFAILED(sort_func='bubble_sort') test_sorts.py::TestSortingAlgorithms::test_sort_positive_numbers - AssertionError: None != [1, 2, 3, 4, 5]
-SUBFAILED(sort_func='quick_sort') test_sorts.py::TestSortingAlgorithms::test_sort_positive_numbers - AssertionError: None != [1, 2, 3, 4, 5]
-SUBFAILED(sort_func='merge_sort') test_sorts.py::TestSortingAlgorithms::test_sort_positive_numbers - AssertionError: None != [1, 2, 3, 4, 5]
-SUBFAILED(sort_func='bubble_sort') test_sorts.py::TestSortingAlgorithms::test_sort_with_duplicates - AssertionError: None != [1, 2, 2, 4, 4]
-SUBFAILED(sort_func='quick_sort') test_sorts.py::TestSortingAlgorithms::test_sort_with_duplicates - AssertionError: None != [1, 2, 2, 4, 4]
-SUBFAILED(sort_func='merge_sort') test_sorts.py::TestSortingAlgorithms::test_sort_with_duplicates - AssertionError: None != [1, 2, 2, 4, 4]
-SUBFAILED(sort_func='bubble_sort') test_sorts.py::TestSortingAlgorithms::test_sort_with_negative_numbers - AssertionError: None != [-5, -1, 0, 2, 3]
-SUBFAILED(sort_func='quick_sort') test_sorts.py::TestSortingAlgorithms::test_sort_with_negative_numbers - AssertionError: None != [-5, -1, 0, 2, 3]
-SUBFAILED(sort_func='merge_sort') test_sorts.py::TestSortingAlgorithms::test_sort_with_negative_numbers - AssertionError: None != [-5, -1, 0, 2, 3]
-SUBFAILED(sort_func='bubble_sort') test_timing.py::TestSortingAlgorithms::test_sort_does_not_modify_input_list - AssertionError: None != [1, 2, 3]
-SUBFAILED(sort_func='quick_sort') test_timing.py::TestSortingAlgorithms::test_sort_does_not_modify_input_list - AssertionError: None != [1, 2, 3]
-SUBFAILED(sort_func='merge_sort') test_timing.py::TestSortingAlgorithms::test_sort_does_not_modify_input_list - AssertionError: None != [1, 2, 3]
-SUBFAILED(sort_func='bubble_sort', data=[]) test_timing.py::TestSortingAlgorithms::test_sort_empty_and_single_item_list - AssertionError: None != []
-SUBFAILED(sort_func='bubble_sort', data=[7]) test_timing.py::TestSortingAlgorithms::test_sort_empty_and_single_item_list - AssertionError: None != [7]
-SUBFAILED(sort_func='quick_sort', data=[]) test_timing.py::TestSortingAlgorithms::test_sort_empty_and_single_item_list - AssertionError: None != []
-SUBFAILED(sort_func='quick_sort', data=[7]) test_timing.py::TestSortingAlgorithms::test_sort_empty_and_single_item_list - AssertionError: None != [7]
-SUBFAILED(sort_func='merge_sort', data=[]) test_timing.py::TestSortingAlgorithms::test_sort_empty_and_single_item_list - AssertionError: None != []
-SUBFAILED(sort_func='merge_sort', data=[7]) test_timing.py::TestSortingAlgorithms::test_sort_empty_and_single_item_list - AssertionError: None != [7]
-SUBFAILED(sort_func='bubble_sort') test_timing.py::TestSortingAlgorithms::test_sort_positive_numbers - AssertionError: None != [1, 2, 3, 4, 5]
-SUBFAILED(sort_func='quick_sort') test_timing.py::TestSortingAlgorithms::test_sort_positive_numbers - AssertionError: None != [1, 2, 3, 4, 5]
-SUBFAILED(sort_func='merge_sort') test_timing.py::TestSortingAlgorithms::test_sort_positive_numbers - AssertionError: None != [1, 2, 3, 4, 5]
-SUBFAILED(sort_func='bubble_sort') test_timing.py::TestSortingAlgorithms::test_sort_with_duplicates - AssertionError: None != [1, 2, 2, 4, 4]
-SUBFAILED(sort_func='quick_sort') test_timing.py::TestSortingAlgorithms::test_sort_with_duplicates - AssertionError: None != [1, 2, 2, 4, 4]
-SUBFAILED(sort_func='merge_sort') test_timing.py::TestSortingAlgorithms::test_sort_with_duplicates - AssertionError: None != [1, 2, 2, 4, 4]
-SUBFAILED(sort_func='bubble_sort') test_timing.py::TestSortingAlgorithms::test_sort_with_negative_numbers - AssertionError: None != [-5, -1, 0, 2, 3]
-SUBFAILED(sort_func='quick_sort') test_timing.py::TestSortingAlgorithms::test_sort_with_negative_numbers - AssertionError: None != [-5, -1, 0, 2, 3]
-SUBFAILED(sort_func='merge_sort') test_timing.py::TestSortingAlgorithms::test_sort_with_negative_numbers - AssertionError: None != [-5, -1, 0, 2, 3]
-=================================== 36 failed, 10 passed in 0.83s ====================================
-pytest
-PS D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014> pytest
-======================================== test session starts =========================================
-platform win32 -- Python 3.14.3, pytest-9.0.3, pluggy-1.6.0
-rootdir: D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014
-plugins: anyio-4.13.0
-collected 10 items                                                                                    
-
-test_sorts.py .....                                                                             [ 50%]
-test_timing.py .....                                                                            [100%]
-
-========================================= 10 passed in 0.09s =========================================
-
-pytest
-PS D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014> pytest
-======================================== test session starts =========================================
-platform win32 -- Python 3.14.3, pytest-9.0.3, pluggy-1.6.0
-rootdir: D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014
-plugins: anyio-4.13.0
-collected 10 items / 1 error                                                                          
-
-=============================================== ERRORS ===============================================
-_________________________________ ERROR collecting test_banchmark.py _________________________________
-ImportError while importing test module 'D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014\test_banchmark.py'.
-Hint: make sure your test modules/packages have valid Python names.
-Traceback:
-C:\Users\hc105\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-test_banchmark.py:6: in <module>
-    from benchmark import make_data, run_benchmark, save_results
-E   ModuleNotFoundError: No module named 'benchmark'
-====================================== short test summary info =======================================
-ERROR test_banchmark.py
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-========================================== 1 error in 0.24s ==========================================
-
-pytest
-PS D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014> pytest
-======================================== test session starts =========================================
-platform win32 -- Python 3.14.3, pytest-9.0.3, pluggy-1.6.0
-rootdir: D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014
-plugins: anyio-4.13.0
-collected 15 items                                                                                    
-
-test_banchmark.py .....                                                                         [ 33%]
-test_sorts.py .....                                                                             [ 66%]
-test_timing.py .....                                                                            [100%]
-
-========================================= 15 passed in 0.15s =========================================
-pytest
-PS D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014> pytest
-======================================== test session starts =========================================
-platform win32 -- Python 3.14.3, pytest-9.0.3, pluggy-1.6.0
-rootdir: D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014
-plugins: anyio-4.13.0
-collected 15 items / 1 error                                                                          
-
-=============================================== ERRORS ===============================================
-___________________________________ ERROR collecting test_plot.py ____________________________________
-ImportError while importing test module 'D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014\test_plot.py'.
-Hint: make sure your test modules/packages have valid Python names.
-Traceback:
-C:\Users\hc105\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py:88: in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-test_plot.py:9: in <module>
-    from plot import load_results, plot_results, main
-E   ModuleNotFoundError: No module named 'plot'
-====================================== short test summary info =======================================
-ERROR test_plot.py
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-========================================== 1 error in 2.94s ==========================================
-pytest
-PS D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014> pytest
-======================================== test session starts =========================================
-platform win32 -- Python 3.14.3, pytest-9.0.3, pluggy-1.6.0
-rootdir: D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014
-plugins: anyio-4.13.0
-collected 21 items                                                                                    
-
-test_banchmark.py .....                                                                         [ 23%]
-test_plot.py ......                                                                             [ 52%]
-test_sorts.py .....                                                                             [ 76%]
-test_timing.py .....                                                                            [100%]
-
-========================================= 21 passed in 2.78s =========================================
-python -m pytest test_security.py
-======================================== test session starts =========================================
-platform win32 -- Python 3.14.3, pytest-9.0.3, pluggy-1.6.0
-rootdir: D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014
-plugins: anyio-4.13.0
-collected 7 items                                                                                     
-
-test_security.py ...FF..                                                                        [100%]
-
-============================================== FAILURES ==============================================
-____________ TestSecurityValidation.test_plot_results_rejects_results_without_data_points ____________
-
-self = <test_security.TestSecurityValidation testMethod=test_plot_results_rejects_results_without_data_points>
-
-    def test_plot_results_rejects_results_without_data_points(self):
-        results = {
-            "quick_sort": {},
-            "merge_sort": {},
-        }
-    
-        with tempfile.TemporaryDirectory() as temp_dir:
-            output_path = Path(temp_dir) / "assets" / "benchmark.png"
-    
->           with self.assertRaises(ValueError):
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-E           AssertionError: ValueError not raised
-
-test_security.py:38: AssertionError
-___________ TestSecurityValidation.test_plot_results_rejects_zero_or_negative_elapsed_time ___________
-
-self = <test_security.TestSecurityValidation testMethod=test_plot_results_rejects_zero_or_negative_elapsed_time>
-
-    def test_plot_results_rejects_zero_or_negative_elapsed_time(self):
-        results = {
-            "quick_sort": {
-                "10": 0.0,
-                "100": -0.001,
-            }
-        }
-    
-        with tempfile.TemporaryDirectory() as temp_dir:
-            output_path = Path(temp_dir) / "assets" / "benchmark.png"
-    
->           with self.assertRaises(ValueError):
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-E           AssertionError: ValueError not raised
-
-test_security.py:52: AssertionError
-========================================== warnings summary ==========================================
-test_security.py::TestSecurityValidation::test_plot_results_rejects_results_without_data_points
-  D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014\plot.py:50: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
-    plt.legend()
-
-test_security.py::TestSecurityValidation::test_plot_results_rejects_zero_or_negative_elapsed_time
-  D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014\plot.py:49: UserWarning: Data has no positive values, and therefore cannot be log-scaled.
-    plt.yscale("log")
-
--- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-====================================== short test summary info =======================================
-FAILED test_security.py::TestSecurityValidation::test_plot_results_rejects_results_without_data_points - AssertionError: ValueError not raised
-FAILED test_security.py::TestSecurityValidation::test_plot_results_rejects_zero_or_negative_elapsed_time - AssertionError: ValueError not raised
-============================== 2 failed, 5 passed, 2 warnings in 1.57s ===============================
-python -m pytest test_security.py
-t_security.py
-======================================== test session starts =========================================
-platform win32 -- Python 3.14.3, pytest-9.0.3, pluggy-1.6.0
-rootdir: D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014
-plugins: anyio-4.13.0
-collected 7 items                                                                                     
-
-test_security.py .......                                                                        [100%]
-
-========================================= 7 passed in 0.64s ==========================================
+# TEST_LOG.md
+
+## 專案名稱
+
+0611 Sort Lab：排序效能實驗室
+
+## 測試策略
+
+本專案採用 TDD 流程完成五個階段。每個階段皆遵守：
+
+```text
+先寫測試 → 跑紅燈 → test commit → 寫實作 → 跑綠燈 → feat commit
+```
+
+測試重點包含：
+
+1. 函式基本功能是否正確。
+2. 邊界條件是否處理。
+3. 是否符合規格限制。
+4. 是否避免不合理輸入造成錯誤結果。
+5. 是否保留可重現的 benchmark 結果。
+
+---
+
+## 測試總覽
+
+| Stage | 測試檔案 | 測試數量 | 測試重點 | 狀態 |
+|---|---|---:|---|---|
+| Stage 1 | `test_timing.py` | 4 | timeit 回傳值、metadata、records、stdout | 通過 |
+| Stage 2 | `test_sorts.py` | 5 | 三種排序、重複值、負數、空 list、不修改輸入 | 通過 |
+| Stage 3 | `test_benchmark.py` | 5 | make_data、optimized sort、benchmark 結構、JSON 輸出 | 通過 |
+| Stage 4 | `test_plot.py` | 6 | 讀 JSON、產 PNG、單資料點、missing file、Agg backend | 通過 |
+| Stage 5 | `test_security.py` | 7 | 負數、空資料、非法 elapsed、非數字 size | 通過 |
+
+---
+
+## Stage 1：`test_timing.py`
+
+### 測試目的
+
+驗證 `timeit` 裝飾器符合規格。
+
+### 測試項目
+
+| 測試名稱 | 說明 |
+|---|---|
+| `test_timeit_preserves_return_value` | 被裝飾函式的回傳值不變 |
+| `test_timeit_records_last_elapsed_and_records` | 呼叫後產生 `last_elapsed` 與 `records` |
+| `test_timeit_preserves_function_metadata` | 使用 `functools.wraps` 保留函式名稱與 docstring |
+| `test_timeit_does_not_print` | 確認裝飾器不輸出 stdout |
+
+### 邊界與副作用
+
+- 使用極短執行時間函式測試 `last_elapsed`。
+- 使用 `redirect_stdout` 確認沒有不必要輸出。
+
+### 測試結果
+
+最終通過。
+
+---
+
+## Stage 2：`test_sorts.py`
+
+### 測試目的
+
+驗證 `bubble_sort`、`quick_sort`、`merge_sort` 的正確性與非破壞性。
+
+### 測試項目
+
+| 測試名稱 | 說明 |
+|---|---|
+| `test_sort_positive_numbers` | 一般正整數排序 |
+| `test_sort_with_duplicates` | 含重複值 |
+| `test_sort_with_negative_numbers` | 含負數 |
+| `test_sort_empty_and_single_item_list` | 邊界：空 list、單一元素 list |
+| `test_sort_does_not_modify_input_list` | 確認回傳新 list，不修改原輸入 |
+
+### 紅燈紀錄
+
+初始骨架只放 `pass` 時，排序函式回傳 `None`，因此測試失敗：
+
+```text
+AssertionError: None != [1, 2, 3]
+AssertionError: None != []
+AssertionError: None != [7]
+```
+
+### 綠燈紀錄
+
+完成排序實作後通過。
+
+---
+
+## Stage 3：`test_benchmark.py`
+
+### 測試目的
+
+驗證 benchmark 與加速版排序可用。
+
+### 測試項目
+
+| 測試名稱 | 說明 |
+|---|---|
+| `test_make_data_is_deterministic_with_same_seed` | 相同 seed 產生相同資料 |
+| `test_make_data_boundary_zero_size` | 邊界：`make_data(0)` 回傳空 list |
+| `test_optimized_quick_sort_correctness` | 加速版排序正確且不修改輸入 |
+| `test_run_benchmark_contains_required_algorithms_and_sizes` | benchmark 結果包含五種演算法 |
+| `test_save_results_creates_json_file` | 可輸出並讀回 JSON |
+
+### 紅燈紀錄
+
+尚未建立 `benchmark.py` 時發生：
+
+```text
+ModuleNotFoundError: No module named 'benchmark'
+```
+
+### 綠燈紀錄
+
+完成 `benchmark.py` 與 `optimized_quick_sort` 後通過。
+
+---
+
+## Stage 4：`test_plot.py`
+
+### 測試目的
+
+驗證 `plot.py` 可以正確讀取 benchmark 結果並輸出圖片。
+
+### 測試項目
+
+| 測試名稱 | 說明 |
+|---|---|
+| `test_load_results_reads_json_file` | 能讀取 `results.json` |
+| `test_plot_results_creates_non_empty_png_file` | 能產生非空 PNG |
+| `test_plot_results_boundary_single_algorithm_single_size` | 邊界：單演算法、單資料點 |
+| `test_main_reads_results_and_creates_output_png` | `main()` 完整執行 |
+| `test_load_results_missing_file_raises_file_not_found_error` | 檔案不存在時丟出 `FileNotFoundError` |
+| `test_plot_uses_agg_backend` | 確認 matplotlib backend 是 `Agg` |
+
+### 紅燈紀錄
+
+尚未建立 `plot.py` 時發生：
+
+```text
+ModuleNotFoundError: No module named 'plot'
+```
+
+### 綠燈紀錄
+
+完成 `plot.py` 後通過。
+
+---
+
+## Stage 5：`test_security.py`
+
+### 測試目的
+
+依安全程式設計原則進行輸入驗證與錯誤防護。
+
+### 測試項目
+
+| 測試名稱 | 說明 |
+|---|---|
+| `test_make_data_rejects_negative_size` | 拒絕負數資料量 |
+| `test_run_benchmark_rejects_zero_repeats` | 拒絕 `repeats=0` |
+| `test_run_benchmark_rejects_negative_size` | 拒絕負數 size |
+| `test_plot_results_rejects_empty_results` | 拒絕空 results |
+| `test_plot_results_rejects_results_without_data_points` | 拒絕無資料點 results |
+| `test_plot_results_rejects_zero_or_negative_elapsed_time` | 拒絕 0 或負數 elapsed time |
+| `test_plot_results_rejects_non_numeric_size_key` | 拒絕非數字 size key |
+
+### 紅燈紀錄
+
+初次安全測試有兩個失敗：
+
+```text
+FAILED test_security.py::TestSecurityValidation::test_plot_results_rejects_results_without_data_points
+FAILED test_security.py::TestSecurityValidation::test_plot_results_rejects_zero_or_negative_elapsed_time
+```
+
+原因：
+
+1. `plot_results` 會忽略空資料，但沒有阻止整張空圖被輸出。
+2. `plot_results` 沒有拒絕 `elapsed <= 0`，導致 log scale 資料不安全。
+
+### 修正方式
+
+在 `plot.py` 新增 `_validate_and_collect_series(results)`：
+
+- 確認每個演算法結果是 dict。
+- 確認至少有一組有效資料點。
+- 確認 size key 可轉成 int。
+- 確認 size 不為負數。
+- 確認 elapsed time 是數字。
+- 確認 elapsed time 大於 0。
+
+### 綠燈紀錄
+
+```text
+test_security.py .......
+7 passed
+```
+
+---
+
+## Benchmark 結果摘要
+
+| Size | bubble_sort | quick_sort | merge_sort | sorted | optimized_quick_sort |
+|---:|---:|---:|---:|---:|---:|
+| 500 | 0.009279 | 0.001123 | 0.000934 | 0.000042 | 0.000340 |
+| 1000 | 0.041029 | 0.000890 | 0.001714 | 0.000096 | 0.000734 |
+| 2000 | 0.212945 | 0.003624 | 0.005817 | 0.000244 | 0.003041 |
+| 4000 | 0.836264 | 0.005308 | 0.010688 | 0.000515 | 0.004099 |
+
+`optimized_quick_sort` 相對 `quick_sort` 整體加速約 **24.95%**。
+
+---
+
+## 最終測試結論
+
+最終整合測試通過：
+
+```text
+27 passed, 28 subtests passed
+```
+
+並確認：
+
+```text
+python benchmark.py  可執行
+python plot.py       可產生 assets/benchmark.png
+```
