@@ -600,3 +600,15 @@ SUBFAILED(sort_func='bubble_sort') test_timing.py::TestSortingAlgorithms::test_s
 SUBFAILED(sort_func='quick_sort') test_timing.py::TestSortingAlgorithms::test_sort_with_negative_numbers - AssertionError: None != [-5, -1, 0, 2, 3]
 SUBFAILED(sort_func='merge_sort') test_timing.py::TestSortingAlgorithms::test_sort_with_negative_numbers - AssertionError: None != [-5, -1, 0, 2, 3]
 =================================== 36 failed, 10 passed in 0.83s ====================================
+pytest
+PS D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014> pytest
+======================================== test session starts =========================================
+platform win32 -- Python 3.14.3, pytest-9.0.3, pluggy-1.6.0
+rootdir: D:\Edwin\program\program-python\2026-python\weeks\week-16\solutions\1114405014
+plugins: anyio-4.13.0
+collected 10 items                                                                                    
+
+test_sorts.py .....                                                                             [ 50%]
+test_timing.py .....                                                                            [100%]
+
+========================================= 10 passed in 0.09s =========================================
